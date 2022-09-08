@@ -1,38 +1,508 @@
-.App {
-  text-align: center;
+@font-face {
+  font-family: Centra;
+  src: url('./assets/fonts/Centra\ No2\ Bold.ttf');
+  font-weight: 700;
+}
+@font-face {
+  font-family: Centra;
+  src: url('./assets/fonts/Centra\ No2.ttf');
+  font-weight: 500;
+}
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+html{
+  scroll-behavior: smooth;
+  scroll-padding-top: 10px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+body{
+  font-weight: 400; 
+  overflow-x: hidden;
+  position: relative;
+  background-color: #121212 !important;
+  color: #fff !important;
+  font-family: 'Centra', sans-serif !important;
+  background-image: url('./assets/imgs/space.png');
+  background-position: top center;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+h1,h2,h3,h4,h5,h6{
+  margin: 0;
+  padding: 0;
+  line-height: normal;
+}
+
+/* NAV BAR SHIT ---------------------------------------------------------------------- */
+.navbar-brand span{
+  color: #fff !important;
+  font-size: large;
+  display: block;
+}
+
+nav{
+  padding: 100px;
+}
+
+nav.navbar {
+  padding: 10px 0;
+  position: fixed;
+  width: 100%;
+  top: 0%;
+  transition: 0.3 ease-in-out;
+}
+
+nav.navbar.scrolled {
+  padding: 0px 0;
+  background-color: #1f1f22;
+  z-index: 2;
+}
+
+nav.link{
+  color: #fff;
+}
+
+nav.navbar a.navbar-brand {
+  width: 15%;
+}
+
+nav.navbar .navbar-nav .nav-link.navbar-link{
+  font-weight: 400;
+  color: #fff;
+  letter-spacing: 0.8px;
+  padding: 10px;
+  font-size: 12;
+  opacity: 0.8;
+}
+nav.navbar .navbar-nav a.nav-link.navbar-link:hover {
+    opacity: 1;
+}
+span.navbar-text{
   display: flex;
-  flex-direction: column;
+  align-items: center;
+}
+
+.social-icon img {
+  align-items: center;
+}
+
+.social-icon{
+  display: inline-block;
+  align-items: center;
+}
+
+.social-icon a {
+  width: 42px;
+  height: 42px;
+  background: rgba(217, 217, 217, 0.1);
+  display: inline-flex;
+  border-radius: 50%;
+  margin-right: 20px;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  line-height: 1;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  transition: scale 0.2s ease-in-out;
+}
+.social-icon a:hover{
+  scale: 1.2;
 }
 
-.App-link {
-  color: #61dafb;
+.navbar-text button {
+  font-weight: 700;
+  color: #fff;
+  border: 1px solid #fff;
+  padding: 18px 34px;
+  font-size: 18px;
+  margin-left: 18px;
+	position: relative;
+	background-color: transparent;
+	transition: 0.3s ease-in-out;
+}
+.navbar-text button span {
+  z-index: 1;
+}
+.navbar-text button::before {
+  content: "";
+  width: 0%;
+  height: 100%;
+  position: absolute;
+  background-color: rgb(255, 255, 255);
+  left: 0;
+  top: 0;
+  z-index: -1;
+  color: #121212;
+  transition: 0.3s ease-in-out;
+  
+}
+.navbar-text button:hover {
+  color: #121212;
+}
+.navbar-text button:hover::before {
+	content: "";
+	width: 100%;
+	height: 100%;
+	position: absolute;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+nav.navbar .navbar-toggler:active,
+nav.navbar .navbar-toggler:focus {
+	outline: none;
+    box-shadow: none;
 }
+
+nav.navbar .navbar-toggler-icon {
+  width: 24px;
+  height: 17px;
+  background-image: none;
+  position: relative;
+  border-bottom: 2px solid #fff;
+  transition: all 300ms linear;
+  top: -2px;
+}
+
+nav.navbar .navbar-toggler-icon:after,
+nav.navbar .navbar-toggler-icon:before {
+	width: 24px;
+	position: absolute;
+	height: 2px;
+	background-color: #fff;
+	top: 0;
+	left: 0;
+	content: '';
+	z-index: 2;
+	transition: all 300ms linear;
+}
+nav.navbar .navbar-toggler-icon:after {
+	top: 8px;
+}
+
+nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon:before {
+	transform: translateY(8px) rotate(-45deg);
+	background-color: #fff;
+	height: 2px;
+}
+
+/* banner shit ----------------------------------------------------------------------------------------------- */
+
+.banner{
+  margin-top: 0;
+  margin-bottom: 170px;
+  padding: 260px 10% 100px 10%;
+  
+  background-position: top center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.banner h1{
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  padding: 8px 10px;
+  background: linear-gradient(90.21deg, rgba(170, 54, 124, 0.5) -5.91%, rgba(74, 47, 189, 0.5) 111.58%);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  font-size: 20px;
+  margin-bottom: 16px;
+  display: inline-block;
+}
+
+.banner h1{
+  font-size: 65px;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  line-height: 1;
+  margin-bottom: 20px;
+}
+
+.banner p{
+  color: #fff;
+  font-size: 18px;
+  letter-spacing: 0.8px;
+  line-height: 1.5em;
+  width: 96%;
+}
+
+
+
+.banner button {
+  font-weight: 700;
+  color: #fff;
+  border: 1px solid #fff;
+  padding: 15px 20px;
+  font-size: 18px;
+	position: relative;
+  background: rgba(255, 0, 0, 0);
+}
+
+.button-text{
+  display: block;
+  top: 0;
+  left: 0;
+
+}
+.button-helper{
+  content: " ";
+  z-index: 1;
+  background: transition;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 1;
+  width: 100%;
+}
+.button-helper::before{
+  content: " ";
+  z-index: 1;
+  background: linear-gradient(90.21deg, rgba(170, 54, 124, 0.5) -5.91%, rgba(74, 47, 189, 0.5) 111.58%);
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  width: 100%;
+  transition: width 0.2s, opacity 0.4s;
+}
+.button-helper:hover::before{
+  content: "";
+  opacity: 1;
+  width: 100%;
+  z-index: -1;
+  position: absolute;
+}
+/* .banner button span {
+  z-index: 1;
+}
+.banner button::before {
+  content: "";
+  width: 0%;
+  height: 100%;
+  position: absolute;
+  background-origin: rgb(255, 255, 255);
+  left: 0;
+  top: 0;
+  z-index: -1;
+  color: #121212;
+  transition: 0.3s ease-in-out;
+  
+}
+.banner button:hover {
+  background: linear-gradient(90.21deg, rgba(170, 54, 124, 0.5) -5.91%, rgba(74, 47, 189, 0.5) 111.58%);
+
+}
+.banner button:hover::before {
+	content: "";
+	width: 100%;
+	height: 100%;
+	position: absolute;
+} */
+
+/*Projects-------------------------------------------------------------------*/
+.projects {
+  padding: 80px 0;
+  position: relative;
+  background-color: #151515;
+  border-top-left-radius: 100px;
+  border-top-right-radius: 100px;
+}
+
+.projects h2{
+  font-size: 45px;
+  font-weight: 700;
+  text-align: center;
+}
+.projects p{
+  color: #B8B8B8;
+  font-size: 18px;
+  letter-spacing: 0.8px;
+  line-height: 1.5em;
+  margin: 14px auto 30px auto;
+  text-align: center;
+  width: 56%;
+}
+.projectcard{
+  position: relative;
+  border-radius: 30px;
+  margin-bottom: 30px;
+  overflow: hidden;
+  position: center;
+  display: flex;
+  justify-content: center;
+  margin-right: 10px;
+  margin-left: 10px;
+  height: 300px;
+}
+
+.projectcard::before{
+  content: "";
+  background: linear-gradient(90.21deg, #AA367C -5.91%, #4A2FBD 111.58%);
+  opacity: 0.85;
+  position: absolute;
+  width: 100%;
+  height: 0;
+  transition: 0.3s ease-in-out;
+}
+
+.projectcard:hover::before{
+  height: 100%;
+  cursor: pointer;
+}
+
+.projectText{
+  position: absolute;
+  text-align: center;
+  top: 65%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: 0.5s ease-in-out;
+  opacity: 0;
+  width: 100%;
+}
+.projectcard:hover .projectText{
+  top: 50%;
+  opacity: 1;
+}
+
+.projectText{
+  font-size: 30px;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  line-height: 1.1em;
+}
+
+.projectText span{
+  font-style: italic;
+  font-weight: 400;
+  font-size: 15px;
+  letter-spacing: 0.8px;
+}
+
+.mag-icon{
+  width:8%;
+  height:8%;
+  justify-content: center;
+  display: inline-block;
+  filter: invert(100%) sepia(1%) saturate(0%) hue-rotate(157deg) brightness(105%) contrast(100%);
+}
+
+/* project popup window */
+.popup{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgb(0,0,0,0.4);
+  opacity: 0;
+  transition: opacity 0.5s;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 3;
+}
+.popup-inner{
+  border-radius: 13px;
+  position: relative;
+  padding: 30px;
+  width: 100%;
+  max-width: 640px;
+  background-color: #1f1f22;
+}
+.popup-inner .close-button{
+  position:absolute;
+  top: 10px;
+  right: 1px;
+  margin-right: -115px;
+  background: rgb(0,0,0,0);
+  border: 0px;
+  z-index: 5;
+}
+.popup .x-icon{
+  width: 6%;
+  height: 6%;
+  filter: invert(100%) sepia(1%) saturate(0%) hue-rotate(157deg) brightness(105%) contrast(100%);
+  transition: filter 0.01s
+}
+.popup .x-icon:hover{
+  filter: invert(59%) sepia(0%) saturate(1097%) hue-rotate(196deg) brightness(117%) contrast(96%);
+}
+.popup-image{
+  justify-content: center;
+  width: 100%;
+  margin-top: 50px;
+  overflow: hidden;
+  display: flex;
+
+  margin-bottom: 30px;
+  position: center;
+  margin-right: -7px;
+  margin-left: 5px;
+  object-fit:cover;
+  height: 400px
+}
+
+.popup-title{
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  justify-content: center;
+  text-align: center;
+  background-color: #27272b;
+  
+  position:absolute;
+  z-index: 0;
+  top:0px;
+  left:0px;
+  width: 100%;
+  padding: 10px;
+  padding-bottom: 5px;
+
+  border-bottom: 1px solid;
+}
+
+.popup-title h4 {
+  vertical-align: center;
+  padding-top: 8px;
+  font-weight: 700px;
+}
+
+.popup-text{
+  text-align: center;
+  width: 100%;
+  margin-bottom: 5px;
+}
+
+.popup-text p{
+  margin-top: 17px;
+  text-align: center;
+  width: 100%;
+}
+
+.popup-text-long p{
+  margin-top: 17px;
+  text-align: center;
+  width: 100%;
+  font-size: 16px;
+}
+.popup-buttons{
+  display: flex;
+  justify-content: center;
+}
+.popup-buttons button{
+  font-weight: 700;
+  color: #fff;
+  border: 1px solid #fff;
+  padding: 9px 17px;
+  background-color: transparent;
+  margin-right: 13px;
+  margin-left: 13px;
+  transition: all 0.4s ease-in-out;
+}
+.popup-buttons button:hover{
+  color: #121212;
+  background-color: #fff;
+}
+
