@@ -36,6 +36,10 @@ h1,h2,h3,h4,h5,h6{
   line-height: normal;
 }
 
+.no-opacity{
+  opacity: 0;
+}
+
 /* NAV BAR SHIT ---------------------------------------------------------------------- */
 .navbar-brand span{
   color: #fff !important;
@@ -532,3 +536,28 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon:before {
   background-color: #fff;
 }
 
+/* footer stuff---------- */
+.footer{
+  display: flex; 
+  justify-content: center;
+  padding: 10px;
+  width: 100%;
+  background: linear-gradient(90.21deg, rgba(170, 54, 124, 0.5) -5.91%, rgba(74, 47, 189, 0.5) 111.58%);
+}
+
+.footer p {
+  font-weight: 400;
+  font-size: 14px;
+  width: 100%;
+  color: #B8B8B8;
+  letter-spacing: 0.5px;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.footer .social-icon{
+  display: flex;
+  justify-content: center;
+  position: relative;
+  margin-top: 10px;
+}

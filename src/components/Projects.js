@@ -45,7 +45,7 @@ function Projects() {
     ];
 
   return (
-    <div className="projects" id="projects">
+    <div className="projects" id="Projects">
         <Container className="projectsContainer">
             <Row>
                 <Col>

@@ -4,9 +4,12 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import {useState, useEffect} from 'react';
 
+import 'animate.css'
+import TrackVisibility from 'react-on-screen';
+
 import gitHub from '../assets/imgs/github.svg';
 import linkedIn from '../assets/imgs/linkedin.svg';
-
+var not_seen = true;
 function NavBar() {
     const [activeLink, setactiveLink] = useState('home');
     const [scrolled, setScrolled] = useState(false);
@@ -22,36 +25,54 @@ function NavBar() {
     }, []);
 
     
-
+    
 
   return (
-    <Navbar expand="lg" className={scrolled ? 'scrolled' : ""}>
-        <Container>
-        <Navbar.Brand href="#home">
-            {/* <img src="" alt="logo"></img> */}
-            <span>Anthony Qin</span>
-        </Navbar.Brand>
 
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
-        <Navbar.Collapse id="basic-navbar-nav">
-            <Nav className="me-auto">
-                <Nav.Link href="#home" className="navbar-link">Home</Nav.Link>
-                <Nav.Link href="#skills" className="navbar-link">Skills</Nav.Link>
-                <Nav.Link href="#Projects" className="navbar-link">Projects</Nav.Link>
+    <TrackVisibility>
+        {({ isVisible }) => 
+        <div className={poo(isVisible)}>
+            <Navbar expand="lg" className={scrolled ? 'scrolled' : ""} id='navbar'>
+                <Container>
+                <Navbar.Brand href="#home">
+                    {/* <img src="" alt="logo"></img> */}
+                    <span>Anthony Qin</span>
+                </Navbar.Brand>
 
-            </Nav>
+                <Navbar.Toggle aria-controls="basic-navbar-nav" />
+                <Navbar.Collapse id="basic-navbar-nav">
+                    <Nav className="me-auto">
+                        <Nav.Link href="#Home" className="navbar-link">Home</Nav.Link>
+                        {/* <Nav.Link href="#skills" className="navbar-link">Skills</Nav.Link> */}
+                        <Nav.Link href="#Projects" className="navbar-link">Projects</Nav.Link>
 
-            <span className="navbar-text">
-                <div className="social-icon">
-                    <a href="https://github.com/qin2500?tab=repositories" target="_blank"> <img src={gitHub} alt="gitHub" /> </a>
-                    <a href="https://cn.linkedin.com/in/anthony-qin-719ba1207/" target="_blank"> <img src={linkedIn} alt="linkedin" /> </a>
-                </div>
-                <button className="vvd"><span className="button">Resume</span></button>
-            </span>
-        </Navbar.Collapse>
-        </Container>
-    </Navbar>
+                    </Nav>
+
+                    <span className="navbar-text">
+                        <div className="social-icon">
+                            <a href="https://github.com/qin2500?tab=repositories" target="_blank"> <img src={gitHub} alt="gitHub" /> </a>
+                            <a href="https://cn.linkedin.com/in/anthony-qin-719ba1207/" target="_blank"> <img src={linkedIn} alt="linkedin" /> </a>
+                        </div>
+                        <button className="vvd"><span className="button">Resume</span></button>
+                    </span>
+                </Navbar.Collapse>
+                </Container>
+            </Navbar>
+        </div>
+        }
+    </TrackVisibility> 
+    
+    
   );
+}
+
+function poo (piss){
+    if(piss && not_seen)
+    {
+        not_seen = false;
+        return "animate__animated animate__fadeInDown animate__delay-1s"
+    }
+    else return ""
 }
 
 export default NavBar;
