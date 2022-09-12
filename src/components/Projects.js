@@ -7,6 +7,7 @@ import TrackVisibility from 'react-on-screen';
 import testImg from "../assets/imgs/test-img.png"
 import sportsHub from "../assets/imgs/project-imgs/SportsHub.PNG"
 import cscb20 from '../assets/imgs/project-imgs/CSCB20.PNG'
+import awsGame from '../assets/imgs/project-imgs/AwsomeGame.PNG'
 
 
 function Projects() {
@@ -37,10 +38,11 @@ function Projects() {
             projectLink:"https://klein-anthony-ethan-b20-site.herokuapp.com/sign_in"
         },
         {
-            title: 'Project 2',
-            description: "Penis",
-            imgUrl: testImg,
-            hasLink: true
+            title: 'Anthony\'s Awesome Game',
+            description: "This is a little game I made in about a week during my last year of highschool. Its made purely in Java, making full use out of its built-in 2D Graphics. More details can be found on it's github page linked below.",
+            imgUrl: awsGame,
+            gitHub: "https://github.com/qin2500/Anthonys-Awsome-Game",
+            hasLink: false,
         },
         {
             title: 'Project 2',
@@ -48,18 +50,6 @@ function Projects() {
             imgUrl: testImg,
             hasLink: false
         },
-        {
-            title: 'Project 2',
-            description: "Penis",
-            imgUrl: testImg,
-            hasLink: false
-        },
-        {
-            title: 'Project 2',
-            description: "Penis",
-            imgUrl: testImg,
-            hasLink: false
-        }
     ];
 
   return (
