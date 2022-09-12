@@ -26,7 +26,7 @@ function banner() {
                   <div className={isVisible ? "animate__animated animate__fadeInDown" : ""}>
                    <div className={isVisible ? "" : "no-opacity"}>
                       <h1>Hi, I'm Anthony Qin</h1>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nostrum laboriosam eligendi voluptatibus dolor nesciunt praesentium, quisquam odit, beatae numquam aliquam, quibusdam voluptate veritatis odio velit ipsam ratione minima ad vel maiores eius id. Itaque molestias voluptatum corrupti ullam voluptate maiores fugit mollitia, autem soluta cupiditate magnam, laboriosam, omnis debitis harum! </p>
+                    <p>A second-year undergraduate at the University of Toronto studying Computer Science specializing in Software Engineering. I aspire for a career where I can develop engaging software and channel my creativity by solving problems in intresting ways. Currently, I am looking for co-op opportunities for the upcoming 2023 winter term. When I'm not at the computer, I enjoy snwoboarding, biking, and playing card games with my friends.</p>
                     <a href="mailto:qin2500@gmail.com" target="_blank">
                       <button className="vvd" > 
                           <span className="button-text">Contact Me</span>

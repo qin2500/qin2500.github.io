@@ -1,22 +1,40 @@
 import React from 'react'
 import { Container, Row, Col } from 'react-bootstrap'
 import  ProjectCard  from './ProjectCard'
+import 'animate.css'
+import TrackVisibility from 'react-on-screen';
+
 import testImg from "../assets/imgs/test-img.png"
+import sportsHub from "../assets/imgs/project-imgs/SportsHub.PNG"
+import cscb20 from '../assets/imgs/project-imgs/CSCB20.PNG'
+
 
 function Projects() {
 
     const projects = [
         {
-            title: 'Project 1',
-            description: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eligendi voluptatibus mollitia beatae fugiat temporibus laudantium cumque deleniti vitae, cupiditate omnis!",
+            title: 'Sports Hub',
+            description: "Sports Hub is an android app developed using Android Studio to help users create, join, and track sports events happening at different venues. The app uses Firebase for data storage and user authentication. It was developed as the final project for the course CSCB07 at UofT.",
+            imgUrl: sportsHub,
+            gitHub: "https://github.com/qin2500/Sports-Hub-CSCB07-Project",
+            hasLink: false,
+            projectLink: "",
+            
+
+        },
+        {
+            title: 'Project 2',
+            description: "Penis",
             imgUrl: testImg,
             hasLink: true
         },
         {
-            title: 'Project 2',
-            description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque cum tenetur maiores, animi laborum sint a corporis voluptatem quisquam modi. Rem ratione debitis possimus aut similique perferendis cupiditate facilis reprehenderit tenetur molestias ipsa a, eveniet nihil minima voluptatibus fugiat necessitatibus ullam! Similique, officiis. Consequatur nesciunt impedit laboriosam, sapiente rerum aliquid molestias aliquam ea, cupiditate fugiat beatae officia autem, suscipit iste. Eos earum deserunt corrupti laboriosam nisi? Velit deleniti laborum doloribus molestias architecto rerum vitae, ducimus quod ratione sequi! Fuga expedita, in ipsa illo iste asperiores vero deserunt voluptatem laborum dolores consequuntur commodi. Iusto possimus suscipit repellat itaque. Quia, itaque dolores!',
-            imgUrl: testImg,
-            hasLink: true
+            title: 'Course Website',
+            description: 'This website is developed to host course information about UofT\'s CSCB20 course as well as facilitate comunication between Professors and students.',
+            imgUrl: cscb20,
+            gitHub: "https://github.com/qin2500/CSCB20-Website",
+            hasLink: true,
+            projectLink:"https://klein-anthony-ethan-b20-site.herokuapp.com/sign_in"
         },
         {
             title: 'Project 2',
@@ -50,10 +68,11 @@ function Projects() {
             <Row>
                 <Col>
                     <h2>My Projects</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Natus, error? Soluta quos impedit doloremque magni! Eius cumque illum a aut.</p>
+                    <p>Here's an ever growing collection of projects I've worked on in the past.</p>
                 </Col>
             </Row>
             <Row>
+            
                 {
                     projects.map((project, index) => {
                         return(
