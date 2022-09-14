@@ -13,11 +13,11 @@ function ProjectCard( {title, description, imgUrl, hasLink, gitHub, projectLink,
             
 
           <div className="projectcard" onClick={() => { setPopupActive(true);}}>
-              <img className="projectImage" src={imgUrl}/>
+              <img className="projectImage" src={imgUrl} prop="u mum gey"/>
               <div className="projectText">
                   <h4>{title}</h4>
                   {/* <span>{description}</span> */}
-                  <img className="mag-icon" src={magnifyingGlass}/>
+                  <img className="mag-icon" src={magnifyingGlass} prop="u mum gay"/>
               </div>
           </div>
           <Popup isActive={popupActive} setTrigger = {setPopupActive} scrollx = {window.scrollX} scrolly = {window.scrollY}>
@@ -26,16 +26,16 @@ function ProjectCard( {title, description, imgUrl, hasLink, gitHub, projectLink,
                     <h4>{title}</h4>
                 </div>
                 <Col lg={20} md={20} className="popup-image-container">
-                    <img className="popup-image" src={imgUrl}  alt="project-image" />
+                    <img className="popup-image" src={imgUrl} />
                 </Col>
                          
                 <div className={description.length > 80 ? "popup-text-long" : "popup-text"}>
                     <p>{description}</p>
                 </div>
                 <span className="popup-buttons">
-                    {hasLink && <a href={projectLink} target="_blank"><button >Project Link</button></a>}
+                    {hasLink && <a href={projectLink} target="_blank" rel="noopener noreferrer"><button >Project Link</button></a>}
                     {downloadLink && <a href={downloadLink} download ><button >Download Link</button></a>}
-                    <a href={gitHub} target="_blank"><button>Source Code</button></a>
+                    <a href={gitHub} target="_blank" rel="noopener noreferrer"><button>Source Code</button></a>
                 </span>
                 
             </div>

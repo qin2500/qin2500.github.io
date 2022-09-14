@@ -2,9 +2,7 @@ import React from 'react'
 import { Container, Row, Col } from 'react-bootstrap'
 import  ProjectCard  from './ProjectCard'
 import 'animate.css'
-import TrackVisibility from 'react-on-screen';
 
-import testImg from "../assets/imgs/test-img.png"
 import sportsHub from "../assets/imgs/project-imgs/SportsHub.PNG"
 import cscb20 from '../assets/imgs/project-imgs/CSCB20.PNG'
 import awsGame from '../assets/imgs/project-imgs/AwsomeGame.PNG'

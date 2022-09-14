@@ -11,7 +11,6 @@ import gitHub from '../assets/imgs/github.svg';
 import linkedIn from '../assets/imgs/linkedin.svg';
 var not_seen = true;
 function NavBar() {
-    const [activeLink, setactiveLink] = useState('home');
     const [scrolled, setScrolled] = useState(false);
 
     useEffect(() => {
@@ -50,8 +49,8 @@ function NavBar() {
 
                     <span className="navbar-text">
                         <div className="social-icon">
-                            <a href="https://github.com/qin2500?tab=repositories" target="_blank"> <img src={gitHub} alt="gitHub" /> </a>
-                            <a href="https://cn.linkedin.com/in/anthony-qin-719ba1207/" target="_blank"> <img src={linkedIn} alt="linkedin" /> </a>
+                            <a href="https://github.com/qin2500?tab=repositories" target="_blank" rel="noopener noreferrer"> <img src={gitHub} alt="gitHub" /> </a>
+                            <a href="https://cn.linkedin.com/in/anthony-qin-719ba1207/" target="_blank" rel="noopener noreferrer"> <img src={linkedIn} alt="linkedin" /> </a>
                         </div>
                         <button className="vvd"><span className="button">Resume</span></button>
                     </span>

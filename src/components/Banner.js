@@ -1,6 +1,5 @@
 import React from 'react'
 import { Row, Col} from 'react-bootstrap'
-import {useState} from'react';
 import 'animate.css'
 import TrackVisibility from 'react-on-screen';
 

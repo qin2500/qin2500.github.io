@@ -1,6 +1,6 @@
 import React from 'react'
 import x from '../assets/imgs/x.svg'
-import { useEffect, componentDidMount } from 'react'
+import { useEffect } from 'react'
 
 function Popup(props) {    
     
@@ -28,7 +28,7 @@ function Popup(props) {
                         props.setTrigger(false);
                       },200);
                     }}>
-                <img className="x-icon" src={x}/>
+                <img className="x-icon" src={x} alt="u mum gay"/>
             </button>
             { props.children }
 
