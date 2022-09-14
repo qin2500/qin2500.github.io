@@ -9,6 +9,9 @@ import TrackVisibility from 'react-on-screen';
 
 import gitHub from '../assets/imgs/github.svg';
 import linkedIn from '../assets/imgs/linkedin.svg';
+
+import resume from '../assets/downloads/resume.pdf'; 
+
 var not_seen = true;
 function NavBar() {
     const [scrolled, setScrolled] = useState(false);
@@ -52,7 +55,7 @@ function NavBar() {
                             <a href="https://github.com/qin2500?tab=repositories" target="_blank" rel="noopener noreferrer"> <img src={gitHub} alt="gitHub" /> </a>
                             <a href="https://cn.linkedin.com/in/anthony-qin-719ba1207/" target="_blank" rel="noopener noreferrer"> <img src={linkedIn} alt="linkedin" /> </a>
                         </div>
-                        <button className="vvd"><span className="button">Resume</span></button>
+                        <a href={resume} target="_blank" rel="noopener noreferrer"><button className="vvd"><span className="button">Resume</span></button></a>
                     </span>
                 </Navbar.Collapse>
                 </Container>
