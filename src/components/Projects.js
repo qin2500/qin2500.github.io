@@ -8,6 +8,8 @@ import testImg from "../assets/imgs/test-img.png"
 import sportsHub from "../assets/imgs/project-imgs/SportsHub.PNG"
 import cscb20 from '../assets/imgs/project-imgs/CSCB20.PNG'
 import awsGame from '../assets/imgs/project-imgs/AwsomeGame.PNG'
+import sportsHubAPK from "../assets/downloads/app-debug.apk"
+import car from '../assets/imgs/project-imgs/car.PNG'
 
 
 function Projects() {
@@ -20,14 +22,16 @@ function Projects() {
             gitHub: "https://github.com/qin2500/Sports-Hub-CSCB07-Project",
             hasLink: false,
             projectLink: "",
+            downloadLink: sportsHubAPK,
             
 
         },
         {
-            title: 'Project 2',
-            description: "Penis",
-            imgUrl: testImg,
-            hasLink: true
+            title: 'Mesh Tool',
+            description: "A small java library I made to help convert meshes between .obj, .off, and .ply formats. The above image is simply a screen shot of the model I used while testing as this project does not have a visual element to it.",
+            imgUrl: car,
+            gitHub: "https://github.com/qin2500/mesh-tool",
+            hasLink: false,
         },
         {
             title: 'Course Website',
@@ -43,12 +47,6 @@ function Projects() {
             imgUrl: awsGame,
             gitHub: "https://github.com/qin2500/Anthonys-Awsome-Game",
             hasLink: false,
-        },
-        {
-            title: 'Project 2',
-            description: "Penis",
-            imgUrl: testImg,
-            hasLink: false
         },
     ];
 

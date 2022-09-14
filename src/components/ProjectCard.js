@@ -4,7 +4,7 @@ import {Col} from 'react-bootstrap'
 import magnifyingGlass from'../assets/imgs/magnifying-glass.svg'
 import Popup from './Popup.js'
 
-function ProjectCard( {title, description, imgUrl, hasLink, gitHub, projectLink} ) {
+function ProjectCard( {title, description, imgUrl, hasLink, gitHub, projectLink, downloadLink} ) {
   const [popupActive, setPopupActive] = useState(false);
 
   
@@ -34,6 +34,7 @@ function ProjectCard( {title, description, imgUrl, hasLink, gitHub, projectLink}
                 </div>
                 <span className="popup-buttons">
                     {hasLink && <a href={projectLink} target="_blank"><button >Project Link</button></a>}
+                    {downloadLink && <a href={downloadLink} download ><button >Download Link</button></a>}
                     <a href={gitHub} target="_blank"><button>Source Code</button></a>
                 </span>
                 
