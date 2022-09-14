@@ -13,11 +13,11 @@ function ProjectCard( {title, description, imgUrl, hasLink, gitHub, projectLink,
             
 
           <div className="projectcard" onClick={() => { setPopupActive(true);}}>
-              <img className="projectImage" src={imgUrl} prop="u mum gey"/>
+              <img className="projectImage" src={imgUrl} alt="u mum gey"/>
               <div className="projectText">
                   <h4>{title}</h4>
                   {/* <span>{description}</span> */}
-                  <img className="mag-icon" src={magnifyingGlass} prop="u mum gay"/>
+                  <img className="mag-icon" src={magnifyingGlass} alt="u mum gay"/>
               </div>
           </div>
           <Popup isActive={popupActive} setTrigger = {setPopupActive} scrollx = {window.scrollX} scrolly = {window.scrollY}>
@@ -26,7 +26,7 @@ function ProjectCard( {title, description, imgUrl, hasLink, gitHub, projectLink,
                     <h4>{title}</h4>
                 </div>
                 <Col lg={20} md={20} className="popup-image-container">
-                    <img className="popup-image" src={imgUrl} />
+                    <img className="popup-image" src={imgUrl}  alt="penis"/>
                 </Col>
                          
                 <div className={description.length > 80 ? "popup-text-long" : "popup-text"}>
