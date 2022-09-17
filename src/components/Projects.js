@@ -26,14 +26,14 @@ function Projects() {
         },
         {
             title: 'Mesh Tool',
-            description: "A small java library I made to help convert meshes between .obj, .off, and .ply formats. The above image is simply a screen shot of the model I used while testing as this project does not have a visual element to it.",
+            description: "A small java library I made to help convert meshes between .obj, .off, and .ply formats. The above image is simply a screen-  shot of the model I used while testing as this project does not have a visual element to it.",
             imgUrl: car,
             gitHub: "https://github.com/qin2500/mesh-tool",
             hasLink: false,
         },
         {
             title: 'Course Website',
-            description: 'This website is developed to host course information about UofT\'s CSCB20 course as well as facilitate comunication between Professors and students.',
+            description: 'This website is developed to host course information about UofT\'s CSCB20 course as well as facilitate communication between Professors and students.',
             imgUrl: cscb20,
             gitHub: "https://github.com/qin2500/CSCB20-Website",
             hasLink: true,
@@ -41,7 +41,7 @@ function Projects() {
         },
         {
             title: 'Anthony\'s Awesome Game',
-            description: "This is a little game I made in about a week during my last year of highschool. Its made purely in Java, making full use out of its built-in 2D Graphics. More details can be found on it's github page linked below.",
+            description: "This is a little game I made in about a week during my last year of high school. It's made purely in Java, making full use of its built-in 2D Graphics. More details can be found on its GitHub page linked below.",
             imgUrl: awsGame,
             gitHub: "https://github.com/qin2500/Anthonys-Awsome-Game",
             hasLink: false,
@@ -54,7 +54,7 @@ function Projects() {
             <Row>
                 <Col>
                     <h2>My Projects</h2>
-                    <p>Here's an ever growing collection of projects I've worked on in the past.</p>
+                    <p>Here's an ever-growing collection of projects I've worked on in the past.</p>
                 </Col>
             </Row>
             <Row>
