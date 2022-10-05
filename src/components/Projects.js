@@ -14,7 +14,7 @@ function Projects() {
 
     const projects = [
         {
-            title: 'Sports Hub',
+            title: 'Android App: Sports Hub',
             description: "Sports Hub is an android app developed using Android Studio to help users create, join, and track sports events happening at different venues. The app uses Firebase for data storage and user authentication. It was developed as the final project for the course CSCB07 at UofT.",
             imgUrl: sportsHub,
             gitHub: "https://github.com/qin2500/Sports-Hub-CSCB07-Project",
