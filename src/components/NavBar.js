@@ -69,7 +69,7 @@ function NavBar() {
 }
 
 function poo (piss){
-    if(piss && not_seen || scrolled)
+    if((piss && not_seen))
     {
         not_seen = false;
         return "animate__animated animate__fadeInDown animate__delay-1s"
