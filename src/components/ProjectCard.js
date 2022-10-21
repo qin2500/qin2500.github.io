@@ -4,7 +4,7 @@ import {Col} from 'react-bootstrap'
 import magnifyingGlass from'../assets/imgs/magnifying-glass.svg'
 import Popup from './Popup.js'
 
-function ProjectCard( {title, description, imgUrl, hasLink, gitHub, projectLink, downloadLink} ) {
+function ProjectCard( {title, description, imgUrl, gitHub, projectLink, downloadLink, popupImg} ) {
   const [popupActive, setPopupActive] = useState(false);
 
   
@@ -26,14 +26,14 @@ function ProjectCard( {title, description, imgUrl, hasLink, gitHub, projectLink,
                     <h4>{title}</h4>
                 </div>
                 <Col lg={20} md={20} className="popup-image-container">
-                    <img className="popup-image" src={imgUrl}  alt="penis"/>
+                    <img className="popup-image" src={(popupImg) ? popupImg : imgUrl}  alt="penis"/>
                 </Col>
                          
                 <div className={description.length > 80 ? "popup-text-long" : "popup-text"}>
                     <p>{description}</p>
                 </div>
                 <span className="popup-buttons">
-                    {hasLink && <a href={projectLink} target="_blank" rel="noopener noreferrer"><button >Project Link</button></a>}
+                    {projectLink && <a href={projectLink} target="_blank" rel="noopener noreferrer"><button >Project Link</button></a>}
                     {downloadLink && <a href={downloadLink} download ><button >Download Link</button></a>}
                     <a href={gitHub} target="_blank" rel="noopener noreferrer"><button>Source Code</button></a>
                 </span>

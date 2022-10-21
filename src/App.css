@@ -27,6 +27,7 @@ body{
   color: #fff !important;
   font-family: 'Centra', sans-serif !important;
   background-image: url('./assets/imgs/space.png');
+  background-size: 2500px 2500px;
   background-position: top center;
   background-repeat: no-repeat;
 }
@@ -566,4 +567,14 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon:before {
   justify-content: center;
   position: relative;
   margin-top: 10px;
+}
+
+.footer .navbar-text {
+  justify-content: center;
+  margin-left: -2.5%;
+}
+
+/* Recoloring SVGs --------------------------- */
+.devpost{
+  filter: invert(100%) sepia(8%) saturate(30%) hue-rotate(310deg) brightness(105%) contrast(111%);
 }
